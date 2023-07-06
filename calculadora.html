@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .fundo {
+            background-image: linear-gradient(45deg,black,crimson);
+            height: 100vh;
+            color: aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        .Calculadora {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.5);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 15px;
+            padding: 15px;
+
+        }
+        .botao {
+            width: 50px;
+            height: 50px;
+            font-size: 25px;
+            background-color: aqua;
+            margin: 3px;
+            cursor: pointer;
+            border: none;
+            color: black;
+        }
+        .botao:hover {
+            background-color: aliceblue;
+        }
+        #resultado {
+            background-color: beige;
+            width: 207px;
+            height: 30px;
+            margin: 5px;
+            font-size: 25px;
+            color: black;
+            text-align: right;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="fundo">
+        <h1>Luiz Fernando</h1>
+        <div class="Calculadora">
+               <h1>Calculadora</h1>
+               <p id="resultado">asdfg</p>
+               <table>
+                     <tr>
+                        <td><button class="botao" onclick="insert('')">C</td></button></td>
+                        <td><button class="botao" onclick="insert('')"><</td></button></td>
+                        <td><button class="botao" onclick="insert('')">/</td></button></td>
+                        <td><button class="botao" onclick="insert('')">X</td></button></td>
+                     </tr>
+                     <tr>
+                        <td><button class="botao" onclick="insert('7')">7</td></button></td>
+                        <td><button class="botao" onclick="insert('8')">8</td></button></td>
+                        <td><button class="botao" onclick="insert('9')">9</td></button></td>
+                        <td><button class="botao" onclick="insert('')">-</td></button></td>
+                     </tr>
+                     <tr>
+                        <td><button class="botao" onclick="insert('4')">4</td></button></td>
+                        <td><button class="botao" onclick="insert('5')">5</td></button></td>
+                        <td><button class="botao" onclick="insert('6')">6</td></button></td>
+                        <td><button class="botao">+</td></button></td>
+                     </tr>
+                     <tr>
+                        <td><button class="botao" onclick="insert('1')">1</td></button></td>
+                        <td><button class="botao" onclick="insert('2')">2</td></button></td>
+                        <td><button class="botao" onclick="insert('3')">3</td></button></td>
+                        <td
+                        rowspan="2"><button class="botao" style="height: 106px">=</td></button></td>
+                     </tr>
+                     <tr>
+                        <td colspan="2"><button class="botao" style="width: 106px;">0</td></button></td>
+                        <td><button class="botao">.</td></button></td>
+                     </tr>
+               </table>
+        </div>
+    </div>
+    <script>
+        function insert(num) {
+                  document.getElementById('resultado').innerHTML = num;
+        }
+    </script>
+</body>
+</html>
